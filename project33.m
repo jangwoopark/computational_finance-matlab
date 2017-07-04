@@ -1,0 +1,50 @@
+clc;
+s0=20; 
+k=20; 
+T=.5; 
+sigma=0.25; 
+r=0.04; 
+nsteps=2;
+dt=T/(nsteps-1);
+n=10000;
+mu=[0;0];
+sigman=[1 .5;.5 1];
+howmany=n;
+bivariate=MultiNormrnd(mu,sigman,howmany);
+st1=zeros(n,1);
+st2=zeros(n,1);
+s=zeros(n,1);
+for i=1:n;
+    st1=s0;
+    st2=s0;
+    for p=2:nsteps;
+    st1=st1*exp((r-sigma^2/2)*dt+sigma*sqrt(dt)*bivariate(i,1));
+    st2=st2*exp((r-sigma^2/2)*dt+sigma*sqrt(dt)*bivariate(i,2));
+    end;
+    s(i)=(st1+st2)/2;
+end;
+pays=max(s-k,0);
+ecall=exp(-r*T)*mean(pays);
+
+d1=(log(s0/k)+(r+sigma^2/2)*T)/(sigma*sqrt(T));
+d2=d1-sigma*sqrt(T);
+c=s0*normcdf(d1)-k*exp(-r*T)*normcdf(d2);
+
+delta=normcdf(d1);
+gamma=(1/(s0*sigma*sqrt(T)))*normpdf(d1);
+theta=(-s0*sigma*normpdf(d1))/(2*sqrt(T))-r*k*exp(-r*T)*normcdf(d2);
+vega=s0*sqrt(T)*normpdf(d1);
+rho=k*T*exp(-r*T)*normcdf(d2);
+
+g=zeros(11,5);
+for e=1:11
+    snod=14+e;
+    d1=(log(snod/k)+(r+sigma^2/2)*T)/(sigma*sqrt(T));
+    d2=d1-sigma*sqrt(T);
+    g(e,1)=normcdf(d1);
+    g(e,2)=(1/(snod*sqrt(T)))*normpdf(d1);
+    g(e,3)=(-snod*sigma*normpdf(d1))/(2*sqrt(T))-r*k*exp(-r*T)*normcdf(d2);
+    g(e,4)=snod*sqrt(T)*normpdf(d1);
+    g(e,5)=k*T*exp(-r*T)*normcdf(d2);
+end;
+plot(g);

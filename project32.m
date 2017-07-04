@@ -1,0 +1,33 @@
+clc;
+n=1000;
+x0=1;
+T=3;
+x3=zeros(n,1);
+for i=1:n;
+    x=x0;
+    for j=1:i;
+    x=x+1/4*x*T/n+1/3*x*sqrt(T/n)*randn-3/4*x*sqrt(T/n)*randn;
+    end;
+    x3(i)=x;
+end;
+
+x3plusone=x3+1;
+Ex313=mean(x3plusone.^(1/3));
+
+w1=sqrt(T/n)*randn;
+z1=sqrt(T/n)*randn;
+w3=zeros(n,1);
+z3=zeros(n,1);
+for p=1:n;
+    w=0;
+    z=0;
+    for h=1:p;
+    w=w+sqrt(T/n)*randn;
+    z=z+sqrt(T/n)*randn;
+    end;
+    w3(p)=w;
+    z3(p)=z;
+end;
+y3=exp(-.08*T+1/3*w3(n)-3/4*z3(n));
+y3plusone=y3+1;
+Ey313=(nthroot(y3plusone,3));
