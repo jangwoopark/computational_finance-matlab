@@ -10,4 +10,9 @@
 - 80 Interest rate models – Single or Multiple Factors (Vasicek, CIR, Longstaff-Schwartz, G2++, Hull-White), Pricing Options on Discount Bonds, Pricing Options on Coupon-Paying Bonds. 
 - 90 Simulation method of valuation and hedging of Mortgage Backed Securities. Prepayment Models, Option-Adjusted Spread – Duration and Convexity. (to be done)
 
-More explanation about each file will come.
+### Projects
+1.1
+- Generate 10,000 Uniformly distributed random numbers on [0,1] and plot the histogram of
+them using LGM method;
+- Now use built-in functions of Matlab to do the same thing.
+- Compare the histograms of the above random number sequences.
