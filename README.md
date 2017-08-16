@@ -16,3 +16,9 @@
 them using LGM method;
 - Now use built-in functions of Matlab to do the same thing.
 - Compare the histograms of the above random number sequences.
+1.2
+- Generate 10,000 random numbers with the following distribution:
+    | -1 with probability 0.3
+X = |  0 with probability 0.5
+    |  1 with probability 0.2
+- Draw the histogram and the empirical distribution function by using the 10,000 numbers generated.
