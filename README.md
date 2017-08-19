@@ -23,9 +23,9 @@
 
 - Generate 10,000 random numbers with the following distribution:
 
-     / -1 with probability 0.3
-X = |   0 with probability 0.5
-     \  1 with probability 0.2
+-      / -1 with probability 0.3
+- X = |   0 with probability 0.5
+-     \  1 with probability 0.2
 
 - Draw the histogram and the empirical distribution function by using the 10,000 numbers generated.
 
@@ -41,3 +41,11 @@ X = |   0 with probability 0.5
 
 - Generate 10,000 Exponentially distributed random numbers with parameter gamma=1.5.
 - Draw the histogram by using the 10,000 numbers. 
+
+1.5
+
+- Generate 5,000 Uniformly distributed random numbers on [0,1].
+- Generate 5,000 Normally distributed random numbers with mean 0 and variance 1, by Box-Muller Method.
+- Draw the histogram by using the 5,000 numbers.
+- Now use the Polar-Marsaglia method.
+- Draw the histogram by using the numbers you got.   
