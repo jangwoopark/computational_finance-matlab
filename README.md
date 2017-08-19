@@ -23,9 +23,9 @@
 
 - Generate 10,000 random numbers with the following distribution:
 
--      / -1 with probability 0.3
+-   =  / -1 with probability 0.3
 - X = |   0 with probability 0.5
--     \  1 with probability 0.2
+-   =  \  1 with probability 0.2
 
 - Draw the histogram and the empirical distribution function by using the 10,000 numbers generated.
 
@@ -49,3 +49,24 @@
 - Draw the histogram by using the 5,000 numbers.
 - Now use the Polar-Marsaglia method.
 - Draw the histogram by using the numbers you got.   
+
+1.6
+
+- Use the density formula for the standard normal distribution to construct the density curve. 
+- Plot it from –4 to 4 by 0.0005 step size.
+- Compare it to the ones obtained above.
+
+1.7
+
+- Use the built-in function (of the software you are using : Matlab, C/C++, VBA, etc.) to generate 5,000 Normally distributed random numbers with mean 0 and variance 1.
+
+1.8
+
+- Compare the histogram of these to the other three cases. 
+- You may compute the means of your sequence of numbers and compare them to 0. 
+- Ideally they must be equal to 0.
+
+1.9
+
+- Generate 10,000 of each of the following distributions using Excel.
+- Draw their histograms: Uniform[0,1], Bernoulli (0.65), Normal(0,1), Exponential(2). 
