@@ -23,9 +23,9 @@
 
 - Generate 10,000 random numbers with the following distribution:
 
--   =  / -1 with probability 0.3
-- X = |   0 with probability 0.5
--   =  \  1 with probability 0.2
+- X =   -1 with probability 0.3 OR
+- X =    0 with probability 0.5 OR
+- X =    1 with probability 0.2
 
 - Draw the histogram and the empirical distribution function by using the 10,000 numbers generated.
 
@@ -70,3 +70,15 @@
 
 - Generate 10,000 of each of the following distributions using Excel.
 - Draw their histograms: Uniform[0,1], Bernoulli (0.65), Normal(0,1), Exponential(2). 
+
+2.1
+
+- Generate a series  =1,…,n  Bivariate-Normally distributed random vectors, with mean of (0,0) and the variance – covariance matrix of 
+- | 1 0.7 |
+- | 0.7 1 |
+
+2.2
+
+- Evaluate the following expected values by using Monte Carlo simulation E(x^3 + SIN(y)) where X and Y have N(0,1) distribution and a covariance of 0.65. 
+
+
