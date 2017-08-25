@@ -85,7 +85,15 @@
 - Now try the Importance sampling method to improve the estimate of pi.
 
 3.1
--Evaluate the following expected values and probabilities:  E(X2^(1/3)), E(Y3), E(X2Y2 1(X2>1)), P(Y2>5)   where the Ito’s processes X and Y evolve according to the following SDE: dXt = (1/5 - 1/2Xt) dt + 2/3 dWt, X0 = 1, dYt = ((2/(1+t) Yt + (1+t^3)/3) dt + (1+t^3)/3 dZt, Y0 = 3/4 and  are independent Wiener processes.
+- Evaluate the following expected values and probabilities:  E(X2^(1/3)), E(Y3), E(X2Y2 1(X2>1)), P(Y2>5)   where the Ito’s processes X and Y evolve according to the following SDE: dXt = (1/5 - 1/2Xt) dt + 2/3 dWt, X0 = 1, dYt = ((2/(1+t) Yt + (1+t^3)/3) dt + (1+t^3)/3 dZt, Y0 = 3/4 and  are independent Wiener processes.
 
 3.2
 -  Estimate the following expected values and compare: E(1+X3)^(1/3), and E(1+Y3)^(1/3) where dXt = 1/4Xtdt + 1/3XtdWt - 3/4XtdZt, X0 = 1, Yt = e^(-.08t + 1/3 Wt + -3/4Zt) and  are independent Wiener processes. 
+
+3.3
+- Compute the price of a European Call option via Monte Carlo simulation. Use variance reduction techniques (e.g. Antithetic variates). The code should be generic: for any input of the 5 parameters S0, T, X, r, sig, the output is the corresponding price of the call option.
+- Compute the price of a European Call option by using the Black-Scholes formula. (use the approximation of N(.)). The code should be generic: for any input values of the 5 parameters S0, T, X, r, sig,  it should compute and return the value of the option price.
+- Compute the hedging parameters of a Call option (all 5 of the Greeks) and graph them as a function of stock price: S0,  where S0=20, X=20, sig=0.25, r=0.04 and T=0.5 years. Use the range [15:25] for S0 with a step size 1. 
+
+4
+-  Compute the probability (by simulation) that a European put option will expire in the money. Use these parameters: S0=20, X=20, sig=0.25, r=0.04 and T=0.5 years. 
