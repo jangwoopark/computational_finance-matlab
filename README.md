@@ -95,5 +95,13 @@
 - Compute the price of a European Call option by using the Black-Scholes formula. (use the approximation of N(.)). The code should be generic: for any input values of the 5 parameters S0, T, X, r, sig,  it should compute and return the value of the option price.
 - Compute the hedging parameters of a Call option (all 5 of the Greeks) and graph them as a function of stock price: S0,  where S0=20, X=20, sig=0.25, r=0.04 and T=0.5 years. Use the range [15:25] for S0 with a step size 1. 
 
-4
+3.4
 -  Compute the probability (by simulation) that a European put option will expire in the money. Use these parameters: S0=20, X=20, sig=0.25, r=0.04 and T=0.5 years. 
+
+3.5
+- Compare the pseudorandom sample with the quasi MC sample of Uniform[0,1]x[0,1]:
+- Generate 100 vectors of Uniform [0,1]x[0,1] by using MATLAB (or the software you are using) random number generator.
+- Generate 100 points of the 2-dimentional Halton sequences, using bases 2  and 7.
+- Generate 100 points of the 2-dimentional Halton sequences, using bases 2  and 4. (4 is non-prime!).
+- Draw all on separate graphs and see if there are differences in the three (visual test only).
+- Use 2-dimensional Halton sequences and compute the following integral:    (use N=10,000. Try different couples of bases: (2,4), (2,7), (5,7). ) int(0,1) int(0,1) e^(-xy) * (sin6pi + cos^(1/3)2pi * y) dxdy
