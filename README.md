@@ -105,3 +105,10 @@
 - Generate 100 points of the 2-dimentional Halton sequences, using bases 2  and 4. (4 is non-prime!).
 - Draw all on separate graphs and see if there are differences in the three (visual test only).
 - Use 2-dimensional Halton sequences and compute the following integral:    (use N=10,000. Try different couples of bases: (2,4), (2,7), (5,7). ) int(0,1) int(0,1) e^(-xy) * (sin6pi + cos^(1/3)2pi * y) dxdy
+
+4.1
+- Use the Binomial Method to price a 6-month European Call option for this situation:  the risk-free interest rate is 5% per annum and the volatility is 24%/annum, the current stock price is $32 and the strike price is $30. Divide the time interval into  parts to estimate the price of this option. Use n = 10, 15, 20, 40, 70, 80, 100, 200 and 500 to compute the approximate price and draw them in one graph, where the horizontal axis measures , and the vertical one– the price of the option. Compare the convergence rates of the four methods below: 
+- Use the binomial method in which u = 1/d, d = c - sqrt(c^2 - 1), c = 1/2(e^-rdelta + e^(r+sig^2)delta), p = (e^rdelta - d)/(u-d)
+- Use the binomial method in which u = e^rdelta(1 + sqrt(e^sig^2*delta - 1)), d = e^rdelta(1 - sqrt(e^sig^2*delta - 1)), p = 1/2
+- Use the binomial method in which u = e^(r-(sig^2/2)delta+sigsqrt(delta), d = e^(r-sig^2/2)delta - sig*sqrt(delta), p = 1/2
+- Use the binomial method in which u = e^sig*sqrt(delta), d = e^(-sigsqrt(delta)), p = 1/2+1/2((r-sig^2/2)sqrt(delta)/sig)
