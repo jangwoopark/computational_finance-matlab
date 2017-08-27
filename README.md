@@ -112,3 +112,12 @@
 - Use the binomial method in which u = e^rdelta(1 + sqrt(e^sig^2*delta - 1)), d = e^rdelta(1 - sqrt(e^sig^2*delta - 1)), p = 1/2
 - Use the binomial method in which u = e^(r-(sig^2/2)delta+sigsqrt(delta), d = e^(r-sig^2/2)delta - sig*sqrt(delta), p = 1/2
 - Use the binomial method in which u = e^sig*sqrt(delta), d = e^(-sigsqrt(delta)), p = 1/2+1/2((r-sig^2/2)sqrt(delta)/sig)
+
+4.2
+- Take the current price of GOOG. Use interest rate =2% , and strike price that is the closest integer (divisible by 10) to 120% of the current price.  Estimate the price of the call option that expires on January of next year, using the binomial approach. GOOG does not pay dividends. To estimate the volatility, use 60 month of historical stock price data (or whatever available) on the company and the method discussed in class. You may use finance.yahoo.com to obtain historical prices, current price of GOOG.  
+
+4.3
+- Consider the following information on the stock and options on it of a company: S0 = $49, K = $50, r = .03, sig = .2, T = .3846 (20 weeks), mu = .14.
+
+4.4
+-Estimate the following and draw the graphs:
