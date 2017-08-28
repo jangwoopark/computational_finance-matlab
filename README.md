@@ -120,4 +120,16 @@
 - Consider the following information on the stock and options on it of a company: S0 = $49, K = $50, r = .03, sig = .2, T = .3846 (20 weeks), mu = .14.
 
 4.4
--Estimate the following and draw the graphs:
+- Estimate the following and draw the graphs:
+- Delta of the call option as a function of S0, for S0 ranging from $10 to $80, in increments of $2.
+- Delta of the call option, as a function of T (time to expiration), from 0 to 0.3846.
+- Theta of the call option, as a function of S0, for S0 ranging from $10  to $80.
+- Gamma of the call option, as a function of S0, for S0 ranging from $10  to $80.
+- Vega of the call option, as a function of S0, for S0 ranging from $10  to $80.
+- Rho of the call option, as a function of S0, for S0 ranging from $10  to $80.
+
+4.5
+-  Consider 12-month put options on a stock of company XYZ. Assume the risk-free rate is 5%/annum and the volatility of the stock price is 30 % /annum and the strike price of the option is $100. Use binomial method to estimate the prices of European and American Put options with current stock prices varying from $80 to $120in increments of $5. Draw them all in one graph and compare.
+
+4.6
+-  Use the Trinomial Method to price a 6-month European Call option in this situation:  the risk-free interest rate is 5% per annum and the volatility is 24%/annum, the current stock price is $32 and the strike price is $30. Divide the time interval into n parts to estimate the price of this option. Use  n = 10, 15, 20, 40, 70, 80, 100, 200 and 500 to compute the approximate price and draw them in one graph, where the horizontal axis measures n, and the vertical one– the price of the option. Compare the convergence rates of the four methods below: 
