@@ -133,3 +133,8 @@
 
 4.6
 -  Use the Trinomial Method to price a 6-month European Call option in this situation:  the risk-free interest rate is 5% per annum and the volatility is 24%/annum, the current stock price is $32 and the strike price is $30. Divide the time interval into n parts to estimate the price of this option. Use  n = 10, 15, 20, 40, 70, 80, 100, 200 and 500 to compute the approximate price and draw them in one graph, where the horizontal axis measures n, and the vertical one– the price of the option. Compare the convergence rates of the four methods below: 
+-  Use the trinomial method applied to the stock price-process (St) in which u = 1/d, d = e^(-sig*sqrt(3delta)), Pd = (rdelta(1-u)+(rdelta)^2 + sig^2 delta)/(u-d)(1-d), Pu = (rdela(1-d)+(rdelta)^2 + sig^2 delta)/(u-d)(u-1), Pm = 1-Pu-Pd
+- Use the trinomial method applied to the Log-stock price-process (Xt) in which in which deltaXu = sig*sqrt(3delta), delta Xd = -sig*sqrt(3delta), Pd = 1/2((sig^2 delta+(r-sig^2/2)^2 delta^2)/deltaXd^2 - (r-sig^2/2)delta/deltaXd), Pu = 1/2((sig^2 delta+(r-sig^2/2)^2)delta^2)/deltaXu^2 + (r-sig^2/2)delta/deltaXu), Pm = 1 - Pu - Pd.
+
+4.7
+-  Use Halton’s Low-discrepancy sequences to price European call options. The code should be generic: it will ask for user inputs for S0, K, T, r, sig, N (number of points) and  (base 1)  and  (base 2). Box-Muller method should be used to generate Normals such as: Z1 = sqrt(-2Ln(U1))cos(2piU2), Z2 = sqrt(-2Ln(U1))sin(2piU2) where  and are the Halton numbers with base b1 and base b2 accordingly. For the price of the call option you may use the following formula: c =b e^-(rT)E*(ST-K)^+ = e^-(rT)E*(S0e^((r-sig^2/2)T+sigWT)-K)^+ = E*f(WT)
