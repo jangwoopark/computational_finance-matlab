@@ -138,3 +138,18 @@
 
 4.7
 -  Use Halton’s Low-discrepancy sequences to price European call options. The code should be generic: it will ask for user inputs for S0, K, T, r, sig, N (number of points) and  (base 1)  and  (base 2). Box-Muller method should be used to generate Normals such as: Z1 = sqrt(-2Ln(U1))cos(2piU2), Z2 = sqrt(-2Ln(U1))sin(2piU2) where  and are the Halton numbers with base b1 and base b2 accordingly. For the price of the call option you may use the following formula: c =b e^-(rT)E*(ST-K)^+ = e^-(rT)E*(S0e^((r-sig^2/2)T+sigWT)-K)^+ = E*f(WT)
+
+5.1
+- Consider the following situation on the stock of company XYZ: The current stock price is $40, and the volatility of the stock price is sig = 20% per annum. Assume the prevailing risk-free rate is r = 6% per annum. Use the following method to price the specified option: 
+-  Use the LSMC method with 100,000 paths simulations (50,000 plus 50,000 antithetic) to price an American put option with strike price of K=$40, maturity of 0.5-years, 1-year, 2-years, and current stock prices of $36, $40, $44. Use Laguerre polynomials for k=2, 3, 4. 
+- Use the LSMC method with 100,000 paths simulations (50,000 plus 50,000 antithetic) to price an American put option with strike price of K=$40, maturity of 0.5-years, 1-year, 2-years, and current stock prices of $36, $40, $44. Use Hermite polynomials for k=2, 3, 4. 
+-  Use the LSMC method with 100,000 paths simulations (50,000 plus 50,000 antithetic) to price an American put option with strike price of K=$40, maturity of 0.5-years, 1-year, 2-years, and current stock prices of $36, $40, $44. Use simple monomials for k=2, 3, 4.
+- Compare all your findings above.
+
+5.2
+- Compute the prices of European options on the same stock with same specifications of the previous problem. Compare with the exact (Black-Scholes) formula.
+
+5.3
+- Forward-start options are path dependent options that have strike prices to be determined at a future date. For example, a forward-start put option payoff at maturity is max(St - ST,0) where the strike price of the put option is St-the price of the stock at the start-time of the option. Here 0 <= t <= T.
+- Estimate the value of the forward-start European put option on a stock with these characteristics: S0 = $65,K = $60, sig = 20% per annum, risk-free rate is r = 6% per annum, t = 0.2 and T = 1. 
+- Estimate the value of the forward-start American put option on a stock with these characteristics: S0 = $65, K = $60, sig = 20% per annum, risk-free rate is r = 6% per annum, t = 0.2 and T = 1. The continuous exercise starts at time t = 0.2.  
