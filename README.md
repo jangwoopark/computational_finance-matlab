@@ -153,3 +153,10 @@
 - Forward-start options are path dependent options that have strike prices to be determined at a future date. For example, a forward-start put option payoff at maturity is max(St - ST,0) where the strike price of the put option is St-the price of the stock at the start-time of the option. Here 0 <= t <= T.
 - Estimate the value of the forward-start European put option on a stock with these characteristics: S0 = $65,K = $60, sig = 20% per annum, risk-free rate is r = 6% per annum, t = 0.2 and T = 1. 
 - Estimate the value of the forward-start American put option on a stock with these characteristics: S0 = $65, K = $60, sig = 20% per annum, risk-free rate is r = 6% per annum, t = 0.2 and T = 1. The continuous exercise starts at time t = 0.2.  
+
+7.1
+-  Consider the following situation on the stock of company XYZ: The current stock price is $10, and the volatility of the stock price is sig = 20% per annum. Assume the prevailing risk-free rate is r = 4% per annum. Use the X = Ln(S) transformation of the Black-Scholes PDE, and deltat = .002, deltaX = sig*sqrt(deltat), or deltaX = sig*sqrt(3deltat), or deltaX = sig*sqrt(4deltat) , a uniform grid to price the following options using the specified methods below: 
+- Use the Explicit Finite-difference method, the Implicit Finite-Difference Method, and Crank-Nicolson Finite-Difference Method to price an European Put option with strike price of K = $10, maturity of 0.5-years, and current stock prices for a range from $1 to $20, in increments of about $1.
+
+7.2
+- Consider the following situation on the stock of company XYZ: The current stock price is $10, and the volatility of the stock price is sig = 20% per annum. Assume the prevailing risk-free rate is  per annum. Use the Black-Scholes PDE and the Explicit Finite-difference method, the Implicit Finite-Difference Method, and Crank-Nicolson Finite-Difference Method to price an American Call and American Put options with strike prices of K = $10, maturity of 0.5-years, and current stock prices for a range from $1 to $20, in increments of about $1.  Choose deltat = .002, and deltaS = .5, delatS = 1, deltaS = 1.5.
