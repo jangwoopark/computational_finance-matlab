@@ -160,3 +160,8 @@
 
 7.2
 - Consider the following situation on the stock of company XYZ: The current stock price is $10, and the volatility of the stock price is sig = 20% per annum. Assume the prevailing risk-free rate is  per annum. Use the Black-Scholes PDE and the Explicit Finite-difference method, the Implicit Finite-Difference Method, and Crank-Nicolson Finite-Difference Method to price an American Call and American Put options with strike prices of K = $10, maturity of 0.5-years, and current stock prices for a range from $1 to $20, in increments of about $1.  Choose deltat = .002, and deltaS = .5, delatS = 1, deltaS = 1.5.
+
+8.1
+-  Assume the dynamics of the short-term interest rate, under the risk-neutral measure, are given by the following SDE (Vasicek model) : drt = k(rbar - rt) dt + sig dWt with r0 = 3%, sig = 15%, k = .2, rbar = 5%.
+-  Use Monte Carlo Simulation (assume each time step is a day) to find the price of a pure discount bond, with Face Value of $1,000, maturing in T=0.5 years (at time t=0):  P(t, T) = EE(* t) [exp(-int(from t to T)r(s)ds)] 
+- 
