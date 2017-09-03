@@ -110,8 +110,8 @@
 - Use the Binomial Method to price a 6-month European Call option for this situation:  the risk-free interest rate is 5% per annum and the volatility is 24%/annum, the current stock price is $32 and the strike price is $30. Divide the time interval into  parts to estimate the price of this option. Use n = 10, 15, 20, 40, 70, 80, 100, 200 and 500 to compute the approximate price and draw them in one graph, where the horizontal axis measures , and the vertical one– the price of the option. Compare the convergence rates of the four methods below: 
 - Use the binomial method in which u = 1/d, d = c - sqrt(c^2 - 1), c = 1/2(e^-rdelta + e^(r+sig^2)delta), p = (e^rdelta - d)/(u-d)
 - Use the binomial method in which u = e^rdelta(1 + sqrt(e^sig^2*delta - 1)), d = e^rdelta(1 - sqrt(e^sig^2*delta - 1)), p = 1/2
-- Use the binomial method in which u = e^(r-(sig^2/2)delta+sigsqrt(delta), d = e^(r-sig^2/2)delta - sig*sqrt(delta), p = 1/2
-- Use the binomial method in which u = e^sig*sqrt(delta), d = e^(-sigsqrt(delta)), p = 1/2+1/2((r-sig^2/2)sqrt(delta)/sig)
+- Use the binomial method in which u = e^(r-(sig^2/2)delta+sigsqrt(delta), d = e^(r-sig^2/2)delta - sig sqrt(delta), p = 1/2
+- Use the binomial method in which u = e^sig sqrt(delta), d = e^(-sigsqrt(delta)), p = 1/2+1/2((r-sig^2/2)sqrt(delta)/sig)
 
 4.2
 - Take the current price of GOOG. Use interest rate =2% , and strike price that is the closest integer (divisible by 10) to 120% of the current price.  Estimate the price of the call option that expires on January of next year, using the binomial approach. GOOG does not pay dividends. To estimate the volatility, use 60 month of historical stock price data (or whatever available) on the company and the method discussed in class. You may use finance.yahoo.com to obtain historical prices, current price of GOOG.  
@@ -133,8 +133,8 @@
 
 4.6
 -  Use the Trinomial Method to price a 6-month European Call option in this situation:  the risk-free interest rate is 5% per annum and the volatility is 24%/annum, the current stock price is $32 and the strike price is $30. Divide the time interval into n parts to estimate the price of this option. Use  n = 10, 15, 20, 40, 70, 80, 100, 200 and 500 to compute the approximate price and draw them in one graph, where the horizontal axis measures n, and the vertical one– the price of the option. Compare the convergence rates of the four methods below: 
--  Use the trinomial method applied to the stock price-process (St) in which u = 1/d, d = e^(-sig*sqrt(3delta)), Pd = (rdelta(1-u)+(rdelta)^2 + sig^2 delta)/(u-d)(1-d), Pu = (rdela(1-d)+(rdelta)^2 + sig^2 delta)/(u-d)(u-1), Pm = 1-Pu-Pd
-- Use the trinomial method applied to the Log-stock price-process (Xt) in which in which deltaXu = sig*sqrt(3delta), delta Xd = -sig*sqrt(3delta), Pd = 1/2((sig^2 delta+(r-sig^2/2)^2 delta^2)/deltaXd^2 - (r-sig^2/2)delta/deltaXd), Pu = 1/2((sig^2 delta+(r-sig^2/2)^2)delta^2)/deltaXu^2 + (r-sig^2/2)delta/deltaXu), Pm = 1 - Pu - Pd.
+-  Use the trinomial method applied to the stock price-process (St) in which u = 1/d, d = e^(-sig sqrt(3delta)), Pd = (rdelta(1-u)+(rdelta)^2 + sig^2 delta)/(u-d)(1-d), Pu = (rdela(1-d)+(rdelta)^2 + sig^2 delta)/(u-d)(u-1), Pm = 1-Pu-Pd
+- Use the trinomial method applied to the Log-stock price-process (Xt) in which in which deltaXu = sig sqrt(3delta), delta Xd = -sig sqrt(3delta), Pd = 1/2((sig^2 delta+(r-sig^2/2)^2 delta^2)/deltaXd^2 - (r-sig^2/2)delta/deltaXd), Pu = 1/2((sig^2 delta+(r-sig^2/2)^2)delta^2)/deltaXu^2 + (r-sig^2/2)delta/deltaXu), Pm = 1 - Pu - Pd.
 
 4.7
 -  Use Halton’s Low-discrepancy sequences to price European call options. The code should be generic: it will ask for user inputs for S0, K, T, r, sig, N (number of points) and  (base 1)  and  (base 2). Box-Muller method should be used to generate Normals such as: Z1 = sqrt(-2Ln(U1))cos(2piU2), Z2 = sqrt(-2Ln(U1))sin(2piU2) where  and are the Halton numbers with base b1 and base b2 accordingly. For the price of the call option you may use the following formula: c =b e^-(rT)E*(ST-K)^+ = e^-(rT)E*(S0e^((r-sig^2/2)T+sigWT)-K)^+ = E*f(WT)
@@ -155,7 +155,7 @@
 - Estimate the value of the forward-start American put option on a stock with these characteristics: S0 = $65, K = $60, sig = 20% per annum, risk-free rate is r = 6% per annum, t = 0.2 and T = 1. The continuous exercise starts at time t = 0.2.  
 
 7.1
--  Consider the following situation on the stock of company XYZ: The current stock price is $10, and the volatility of the stock price is sig = 20% per annum. Assume the prevailing risk-free rate is r = 4% per annum. Use the X = Ln(S) transformation of the Black-Scholes PDE, and deltat = .002, deltaX = sig*sqrt(deltat), or deltaX = sig*sqrt(3deltat), or deltaX = sig*sqrt(4deltat) , a uniform grid to price the following options using the specified methods below: 
+-  Consider the following situation on the stock of company XYZ: The current stock price is $10, and the volatility of the stock price is sig = 20% per annum. Assume the prevailing risk-free rate is r = 4% per annum. Use the X = Ln(S) transformation of the Black-Scholes PDE, and deltat = .002, deltaX = sig sqrt(deltat), or deltaX = sig sqrt(3deltat), or deltaX = sig sqrt(4deltat) , a uniform grid to price the following options using the specified methods below: 
 - Use the Explicit Finite-difference method, the Implicit Finite-Difference Method, and Crank-Nicolson Finite-Difference Method to price an European Put option with strike price of K = $10, maturity of 0.5-years, and current stock prices for a range from $1 to $20, in increments of about $1.
 
 7.2
@@ -167,3 +167,7 @@
 - Use Monte Carlo Simulation to find the price of a coupon paying bond, with Face Value of $1,000, paying semiannual coupons of $30, maturing in T=4 years: P(0,8,T) = EE(* t) [int(from i=1 to 8) Ci exp(-int(from 0 to Ti)r(s)ds)] where Ci = $30 for i = 1,2, ... , 7; and C8 = $1,030, T = {T1, T2, T3, T4, T5, T6, T7, T8} = {.5, 1, 1.5, 2, 2.5, 3, 3.5, 4}.
 - Use Monte Carlo Simulation to find the price of a European Call option on the pure discount bond, that matures in 3 months and has a strike price of K=$950.  
 - Find the price of a European Call option on the coupon paying bond, that matures in 3 months and has a strike price of K=$950. 
+
+8.2
+- Assume the dynamics of the short-term interest rate, under the risk-neutral measure, are given by the following SDE (CIR model): drt = k(rbar - rt)dt + sig sqrt(rt) dWt with r0 = 3%, sig = 12%, k = .2, rbar = 5%
+- Use Monte Carlo Simulation to find at time t=0 the price c(t, T, S) of a European Call option, with strike price of K=$950, maturity of T=0.5 years on a Pure Discount Bond that matures in  year: 
