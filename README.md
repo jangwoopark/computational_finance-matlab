@@ -171,4 +171,8 @@
 8.2
 - Assume the dynamics of the short-term interest rate, under the risk-neutral measure, are given by the following SDE (CIR model): drt = k(rbar - rt)dt + sig sqrt(rt) dWt with r0 = 3%, sig = 12%, k = .2, rbar = 5%
 - Use Monte Carlo Simulation to find at time t=0 the price c(t, T, S) of a European Call option, with strike price of K=$950, maturity of T=0.5 years on a Pure Discount Bond that matures in  year: c(t, T, S) = EE(* t)[exp(-int(from t to T) r(u)du) max(P(T,S)-K,0)]
-- Use  the Implicit Finite-Difference Method to find at time t=0 the price c(t, T, S) of a European Call option, with strike price of K=$950, maturity of T=0.5 years on a Pure Discount Bond that matures in S = 1 year.
+- Use  the Implicit Finite-Difference Method to find at time t=0 the price c(t, T, S) of a European Call option, with strike price of K=$950, maturity of T=0.5 years on a Pure Discount Bond that matures in S = 1 year. dc/dt + 1/2 sig^2 r de^2c/dr^2 + k(rbar - r) dc/dr -rc = 0 with c(T,T,S) = max(P(t,T,S) - K,0), and P(T,S) is computed explicitly.
+-   Compute the price of the European Call option above using the explicit formula and compare your findings in parts above to the one here. 
+
+8.3
+- Assume the dynamics of the short-term interest rate, under the risk-neutral measure, are given by the following system of SDE (G2++ model): dxt = -axtdt + sig dW(1 t), dyt = -bytdt _ eta dW(2 t) , rt = xt + yt + phit, x0 = y0 = 0, phi0 = r0 =3%, dW(1 t)dW(2 t) = rodt, ro = .7, a =.1, b=.3, sig = 3%, eta = 8%.
