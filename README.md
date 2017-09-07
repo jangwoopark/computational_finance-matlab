@@ -176,3 +176,6 @@
 
 8.3
 - Assume the dynamics of the short-term interest rate, under the risk-neutral measure, are given by the following system of SDE (G2++ model): dxt = -axtdt + sig dW(1 t), dyt = -bytdt _ eta dW(2 t) , rt = xt + yt + phit, x0 = y0 = 0, phi0 = r0 =3%, dW(1 t)dW(2 t) = rodt, ro = .7, a =.1, b=.3, sig = 3%, eta = 8%.
+- Assume phit = const = 3% for any t>=0.
+- Use Monte Carlo Simulation to find at time t=0 the price p(t,T,S) of a European Put option, with strike price of K=$900, maturity of T=0.5 years on a Pure Discount Bond that matures in S=1 year. Compare it with the price found by the explicit formula. 
+ 
